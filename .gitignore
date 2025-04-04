@@ -1,0 +1,46 @@
+# ghz测试报告输出
+/reports/*
+!/reports/.gitkeep
+
+# Windows系统文件
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# PowerShell执行历史
+PSReadLine/
+
+# 临时文件
+*.tmp
+*.bak
+*.swp
+*~
+
+# 下载的ghz二进制文件和临时目录
+ghz-*.tar.gz
+ghz-*.zip
+ghz-download/
+
+# IDE和编辑器的临时文件和配置目录
+.vscode/
+.idea/
+*.suo
+*.user
+*.sln.docstates
+
+# 日志文件
+*.log
+*.log.*
+
+# 个人配置文件
+local.config.json
+
+# 自定义报告输出文件
+*.html
+*.json
+*.csv
+*.txt
+!/config/*.json
+!/data/*.json 

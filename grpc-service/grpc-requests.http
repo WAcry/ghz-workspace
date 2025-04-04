@@ -1,0 +1,56 @@
+### Request with metadata
+GRPC localhost:50051/helloworld.Greeter/SayHello
+authorization: 123456
+
+{
+  "name": "David",
+  "age": 24,
+  "tags": [
+    "tag1",
+    "tag2"
+  ]
+}
+
+### Server streaming
+GRPC localhost:50051/helloworld.Greeter/SayHelloServerStream
+
+{
+  "name": "David",
+  "age": 24,
+  "tags": [
+    "tag1",
+    "tag2"
+  ]
+}
+
+### Requests in the loop
+< {%
+    // 如果未定义 iterations 数组，则构造一个包含 100 个迭代数据的数组
+    let loopAmount = 100;
+    if (!request.variables.get("iterations")) {
+        let iterations = [];
+        for (let i = 0; i < loopAmount; i++) {
+            iterations.push({"iteration": i + 1});
+        }
+        request.variables.set("iterations", iterations);
+    }
+%}
+
+GRPC localhost:50051/helloworld.Greeter/SayHello
+authorization: 123456
+
+{
+  "name": "David - iteration {{$.iterations..iteration}}",
+  "age": 24,
+  "tags": [
+    "tag1",
+    "tag2"
+  ]
+}
+
+> {%
+    // 根据当前的迭代索引获取对应的数据
+    let current = request.variables.get("iterations")[request.iteration()];
+    client.log(`执行第 ${current.iteration} 次调用`);
+    // 你可以在这里增加断言或其他验证逻辑
+%}

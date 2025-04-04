@@ -1,8 +1,5 @@
-# 安装ghz的PowerShell脚本
-# 作者: ANTML
-# 描述: 此脚本用于下载和安装ghz - gRPC性能测试工具
+﻿# 下载安装 ghz
 
-# 创建必要的目录
 $projectRoot = Split-Path -Parent $PSScriptRoot
 $reportDir = Join-Path $projectRoot "reports"
 
@@ -64,9 +61,7 @@ catch {
 
 Write-Host "`n使用说明:" -ForegroundColor Cyan
 Write-Host "1. 重启PowerShell或命令提示符以使PATH更改生效"
-Write-Host "2. 使用'ghz --help'查看所有可用选项"
+Write-Host "2. 使用 'ghz --help' 查看所有可用选项"
 Write-Host "3. 运行脚本开始测试: .\scripts\run-ghz-tests.ps1"
-Write-Host "4. 高级用法示例: .\scripts\advanced-examples.ps1"
-Write-Host "5. 如有问题请参考: .\docs\troubleshooting.md`n"
 
-Write-Host "所有测试报告将保存在: $reportDir 目录" -ForegroundColor Green 
+Write-Host "所有测试报告将保存在: $reportDir 目录" -ForegroundColor Green

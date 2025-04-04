@@ -16,6 +16,8 @@ PSReadLine/
 *.tmp
 *.bak
 *.swp
+*/bin
+*/obj
 *~
 
 # 下载的ghz二进制文件和临时目录

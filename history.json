@@ -1,0 +1,10 @@
+[
+  {
+    "name": "grpcb.in (tls)",
+    "host": "grpcb.in:443",
+    "mode": "proto",
+    "security": "tls-skip",
+    "proto": "Protos/greet.proto",
+    "last_used": "2025-05-25T06:07:06-07:00"
+  }
+]

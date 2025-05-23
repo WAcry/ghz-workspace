@@ -1,0 +1,34 @@
+# Go related
+# Build output
+bin/
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.test
+*.out
+
+# Dependency management
+vendor/
+
+# Go module cache
+.gomodcache/
+
+# IDE related
+# VSCode
+.vscode/
+*.code-workspace
+
+# GoLand
+.idea/
+*.iml
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Log and temp files
+*.log
+*.tmp
+

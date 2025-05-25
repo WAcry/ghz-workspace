@@ -1,4 +1,4 @@
-# ghz Interactive
+# ghz Interactive for gRPC load testing
 
 An interactive CLI wrapper around [ghz](https://github.com/bojand/ghz)
 
